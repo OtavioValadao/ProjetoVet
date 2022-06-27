@@ -28,6 +28,20 @@ public class Cliente {
     public Cliente() {
     }
 
+    public Cliente(String nome, String lagradouro, String bairro, String cep, String estado, int telefone) {
+    }
+
+    public Cliente(Long id_cliente, List<Animal> nomedoanimal, String nome, String lagradouro, String bairro,
+                   String cep, String estado, int telefone) {
+        this.id_cliente = id_cliente;
+        this.nomedoanimal = nomedoanimal;
+        this.nome = nome;
+        this.lagradouro = lagradouro;
+        this.bairro = bairro;
+        this.cep = cep;
+        this.estado = estado;
+        this.telefone = telefone;
+    }
 
     public List<Animal> getNomedoanimal() {
         return nomedoanimal;

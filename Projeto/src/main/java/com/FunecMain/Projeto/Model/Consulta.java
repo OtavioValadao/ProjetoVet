@@ -1,5 +1,6 @@
 package com.FunecMain.Projeto.Model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.apache.tomcat.jni.Local;
 
 import javax.persistence.*;
@@ -15,10 +16,12 @@ public class Consulta {
     private LocalDateTime data = LocalDateTime.now();
 
     @OneToOne
+    @JsonIgnore
     @JoinColumn(name = "id_animal")
     private Animal id_animal;
 
     @ManyToOne
+    @JsonIgnore
     @JoinColumn(name = "id_vet")
     private Vet id_vet;
 

@@ -22,6 +22,9 @@ public class ClienteDTO {
         this.animaisCliente.addAll(cliente.getNomedoanimal().stream().map(AnimalDTO::new).collect(Collectors.toList()));
     }
 
+    public ClienteDTO() {
+    }
+
     public List<AnimalDTO> getAnimaisCliente() {
         return animaisCliente;
     }
